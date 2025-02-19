@@ -1,0 +1,103 @@
+/* Import Gothic Font */
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=EB+Garamond:wght@400;700&display=swap');
+
+body {
+    background: #221f1f;
+    color: #e0d8b0;
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section - Mists Background */
+.hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1519068737630-e5db30e12e42') no-repeat center center;
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark mist effect */
+}
+
+.hero-content {
+    position: relative;
+    color: #d4c2a8;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Title */
+.hero h1 {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Navigation Buttons */
+nav {
+    margin-top: 20px;
+}
+
+nav .button {
+    display: inline-block;
+    background: linear-gradient(to right, #8b4513, #5a3e1b);
+    color: #ffcc66;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .button:hover {
+    box-shadow: 0 0 15px #ffcc66, 0 0 25px #ffae00;
+}
+
+/* Content Box */
+.container {
+    max-width: 900px;
+    background: rgba(30, 20, 10, 0.9);
+    padding: 20px;
+    margin: 50px auto;
+    border: 2px solid #5a3e1b;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 204, 102, 0.5);
+}
+
+/* Journal Entry */
+.journal-entry {
+    font-style: italic;
+    background: rgba(10, 5, 2, 0.8);
+    padding: 15px;
+    border-left: 5px solid #c49b5a;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0d8b0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    color: #c49b5a;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+}
