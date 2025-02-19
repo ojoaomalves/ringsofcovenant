@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ring of Covenant Campaign</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ring of Covenant</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- Hero Section with Mists -->
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Ring of Covenant</h1>
-            <p>A world shrouded in mystery, bound by ritual, haunted by the Mists.</p>
-            <nav>
-                <a href="timeline.html" class="button">Timeline</a>
-                <a href="characters.html" class="button">Characters</a>
-                <a href="maps.html" class="button">Maps</a>
-                <a href="sessions.html" class="button">Sessions</a>
-            </nav>
-        </div>
-    </header>
+  <!-- Toggle Button -->
+  <button id="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h2>The Journal of Elias Thorn</h2>
-        <blockquote class="journal-entry">
-            <p><strong>9th of Duskfall, Year of Covenant 181</strong></p>
-            <p>The Day of Covenant has come again. The village gathers in the square, repeating the Ritual as they have for 181 years. The elders carve runes into the earth, the torches burn low, and the offering is made. We tell ourselves the Mists will not come where the Ritual holds. We must believe it.</p>
-            <p>But I have seen the Mists at the boundary, writhing as if alive, inching forward only to recoil. I have heard whispers on the wind, voices speaking words I do not understand. How much longer will the Ritual keep them at bay? How much longer before the price is not enough?</p>
-            <p><em>May the Dames keep us.</em></p>
-            <p>— Elias Thorn</p>
-        </blockquote>
-    </div>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <h1>Ring of Covenant</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="characters.html">Characters</a>
+      <a href="maps.html">Maps</a>
+      <a href="sessions.html">Sessions</a>
+    </nav>
+  </aside>
 
-    <footer>
-        <p>© Year of Covenant 181 - A Dark Fantasy Adventure</p>
-    </footer>
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h2>A World Bound by Ritual</h2>
+        <p>The Mists whisper at the edges, waiting for their time.</p>
+      </div>
+    </section>
+
+    <!-- Journal Entry -->
+    <section class="container">
+      <h2>The Journal of Elias Thorn</h2>
+      <blockquote class="journal-entry">
+        <p><strong>9th of Duskfall, Year of Covenant 180</strong></p>
+        <p>The Day of Covenant has come again. The village gathers in the square, repeating the Ritual as they have for 180 years...</p>
+        <p>But I have seen the Mists at the boundary, writhing as if alive, inching forward only to recoil. I have heard whispers on the wind...</p>
+        <p><em>May the Dames keep us.</em></p>
+        <p>— Elias Thorn</p>
+      </blockquote>
+    </section>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var mainContent = document.getElementById("main-content");
+      sidebar.classList.toggle("collapsed");
+      
+      // Adjust the main content margin based on the sidebar state
+      if (sidebar.classList.contains("collapsed")) {
+        mainContent.style.marginLeft = "0";
+        document.getElementById("toggle-btn").style.left = "10px";
+      } else {
+        mainContent.style.marginLeft = "250px";
+        document.getElementById("toggle-btn").style.left = "260px";
+      }
+    }
+  </script>
 
 </body>
 </html>
